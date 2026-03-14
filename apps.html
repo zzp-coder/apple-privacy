@@ -4,14 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Simple Apps — 6 Premium iOS Utilities, One-Time Purchase</title>
-<meta name="description" content="6 premium iOS apps. No subscriptions. No ads. Pay once, use forever. QuickInvoice AI, Focus Timer Pro, Tip & Bill Split, Habit Tracker Pro, Unit Converter Pro, Password Generator Pro.">
+<meta name="description" content="6 premium iOS apps. No subscriptions. No ads. Pay once, use forever. Available in 9 languages.">
+<meta property="og:title" content="Simple Apps — Premium iOS Utilities">
+<meta property="og:description" content="6 powerful iOS apps. Pay once, use forever. No subscriptions. No ads. 9 languages.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://zzp-coder.github.io/apple-privacy/apps.html">
 <style>
   :root {
-    --bg: #0A0A0F;
-    --card: #13131A;
+    --bg: #08080E;
+    --card: #111118;
+    --card2: #161622;
     --border: rgba(255,255,255,0.07);
     --text: #F0F0F5;
     --muted: rgba(255,255,255,0.45);
+    --muted2: rgba(255,255,255,0.25);
   }
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
@@ -22,322 +28,462 @@
     line-height: 1.6;
   }
 
-  /* Header */
+  /* ── Hero ── */
   .hero {
     text-align: center;
-    padding: 80px 24px 60px;
-    background: radial-gradient(ellipse at 50% 0%, rgba(0,122,255,0.12) 0%, transparent 70%);
+    padding: 88px 24px 72px;
+    background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0,122,255,0.18) 0%, transparent 70%);
+    position: relative; overflow: hidden;
+  }
+  .hero::before {
+    content: ''; position: absolute; inset: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
   }
   .hero-badge {
     display: inline-flex; align-items: center; gap: 8px;
     background: rgba(0,122,255,0.12); border: 1px solid rgba(0,122,255,0.25);
-    border-radius: 20px; padding: 6px 16px; font-size: 13px; font-weight: 600;
-    color: #64ABFF; margin-bottom: 24px;
+    border-radius: 20px; padding: 6px 18px; font-size: 13px; font-weight: 700;
+    color: #64ABFF; margin-bottom: 28px; letter-spacing: 0.3px;
   }
   .hero h1 {
-    font-size: clamp(36px, 6vw, 64px);
-    font-weight: 900; letter-spacing: -2px; line-height: 1.05;
-    margin-bottom: 20px;
+    font-size: clamp(38px, 6vw, 68px);
+    font-weight: 900; letter-spacing: -2.5px; line-height: 1.03;
+    margin-bottom: 22px;
   }
-  .hero h1 span { color: #007AFF; }
-  .hero p {
-    font-size: 18px; color: var(--muted); max-width: 560px;
-    margin: 0 auto 36px; line-height: 1.6;
+  .hero h1 em { font-style: normal; color: #007AFF; }
+  .hero-sub {
+    font-size: 19px; color: var(--muted); max-width: 540px;
+    margin: 0 auto 40px; line-height: 1.65;
   }
   .value-pills {
     display: flex; flex-wrap: wrap; justify-content: center;
-    gap: 10px; margin-bottom: 0;
+    gap: 10px; margin-bottom: 48px;
   }
-  .vpill {
-    background: rgba(255,255,255,0.05); border: 1px solid var(--border);
-    border-radius: 20px; padding: 7px 16px; font-size: 14px; font-weight: 500;
-    color: rgba(255,255,255,0.7);
+  .pill {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px; padding: 7px 16px; font-size: 14px; font-weight: 600;
+    display: flex; align-items: center; gap: 6px;
   }
-  .vpill span { margin-right: 6px; }
+  .stat-row {
+    display: flex; justify-content: center; gap: 48px; flex-wrap: wrap;
+    padding-top: 16px; border-top: 1px solid var(--border); max-width: 640px; margin: 0 auto;
+  }
+  .stat { text-align: center; }
+  .stat-num { font-size: 32px; font-weight: 900; color: #007AFF; line-height: 1; }
+  .stat-lbl { font-size: 13px; color: var(--muted); margin-top: 4px; }
 
-  /* Apps grid */
-  .section { max-width: 1100px; margin: 0 auto; padding: 60px 24px; }
+  /* ── Section ── */
+  .section { max-width: 960px; margin: 0 auto; padding: 72px 24px; }
   .section-title {
-    font-size: 28px; font-weight: 800; letter-spacing: -0.8px;
-    margin-bottom: 36px; text-align: center;
+    font-size: 13px; font-weight: 800; color: var(--muted); text-transform: uppercase;
+    letter-spacing: 2px; margin-bottom: 16px; text-align: center;
   }
+  .section-h2 {
+    font-size: clamp(28px, 4vw, 42px); font-weight: 900; text-align: center;
+    letter-spacing: -1.5px; margin-bottom: 48px; line-height: 1.1;
+  }
+  .section-h2 em { font-style: normal; color: #007AFF; }
+
+  /* ── Apps Grid ── */
   .apps-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
   }
-
   .app-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    overflow: hidden;
-    transition: transform 0.2s, border-color 0.2s;
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 20px; padding: 24px; transition: transform 0.2s, border-color 0.2s;
+    position: relative; overflow: hidden;
   }
-  .app-card:hover {
-    transform: translateY(-3px);
-    border-color: rgba(255,255,255,0.14);
+  .app-card:hover { transform: translateY(-3px); }
+  .app-card::before {
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    border-radius: 20px 20px 0 0;
   }
+  .app-card[data-color="blue"]::before   { background: linear-gradient(90deg, #007AFF, #0051D4); }
+  .app-card[data-color="orange"]::before { background: linear-gradient(90deg, #FF6B35, #FF3300); }
+  .app-card[data-color="green"]::before  { background: linear-gradient(90deg, #34C759, #20A041); }
+  .app-card[data-color="purple"]::before { background: linear-gradient(90deg, #AF52DE, #8B2FC9); }
+  .app-card[data-color="teal"]::before   { background: linear-gradient(90deg, #0A84FF, #0055D4); }
+  .app-card[data-color="mint"]::before   { background: linear-gradient(90deg, #30D158, #20A141); }
+  .app-card:hover[data-color="blue"]   { border-color: rgba(0,122,255,0.35); }
+  .app-card:hover[data-color="orange"] { border-color: rgba(255,107,53,0.35); }
+  .app-card:hover[data-color="green"]  { border-color: rgba(52,199,89,0.35); }
+  .app-card:hover[data-color="purple"] { border-color: rgba(175,82,222,0.35); }
+  .app-card:hover[data-color="teal"]   { border-color: rgba(10,132,255,0.35); }
+  .app-card:hover[data-color="mint"]   { border-color: rgba(48,209,88,0.35); }
 
-  .app-card-header {
-    padding: 24px 24px 20px;
-    display: flex; align-items: flex-start; gap: 16px;
-  }
-
+  .app-header { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
   .app-icon {
-    width: 64px; height: 64px; border-radius: 14px; flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center; font-size: 28px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    width: 56px; height: 56px; border-radius: 14px; font-size: 28px;
+    display: flex; align-items: center; justify-content: center; flex-shrink: 0;
   }
-
-  .app-meta { flex: 1; }
-  .app-name { font-size: 18px; font-weight: 800; letter-spacing: -0.4px; }
-  .app-tagline { font-size: 13px; color: var(--muted); margin-top: 3px; }
-
+  .app-name { font-size: 17px; font-weight: 800; margin-bottom: 2px; }
   .app-price {
-    font-size: 22px; font-weight: 800; text-align: right; flex-shrink: 0;
+    font-size: 14px; font-weight: 700; padding: 2px 10px;
+    border-radius: 10px; display: inline-block;
   }
-  .app-price .once { font-size: 11px; color: var(--muted); font-weight: 500; display: block; }
-
-  .app-desc {
-    padding: 0 24px 16px;
-    font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.6;
+  .app-desc { font-size: 14px; color: var(--muted); line-height: 1.55; margin-bottom: 16px; }
+  .app-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+  .feature-chip {
+    font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 8px;
+    background: rgba(255,255,255,0.06); color: var(--muted); border: 1px solid var(--border);
   }
-
-  .app-features {
-    padding: 0 24px 20px;
-    display: flex; flex-wrap: wrap; gap: 8px;
-  }
-
-  .feat-chip {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 8px; padding: 4px 10px; font-size: 12px;
-    color: rgba(255,255,255,0.55); font-weight: 500;
-  }
-
   .app-cta {
-    margin: 0 24px 24px;
-    display: block; text-align: center;
-    padding: 12px; border-radius: 12px;
-    font-size: 15px; font-weight: 700; text-decoration: none;
-    transition: opacity 0.2s;
+    display: block; text-align: center; padding: 11px;
+    border-radius: 12px; font-size: 14px; font-weight: 800;
+    text-decoration: none; transition: opacity 0.2s;
+    border: 1.5px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.04);
   }
 
-  .app-cta:hover { opacity: 0.85; }
-  .cta-coming { background: rgba(255,255,255,0.06); color: rgba(255,255,255,0.4); cursor: default; }
-  .cta-coming:hover { opacity: 1; }
+  /* ── Why section ── */
+  .why-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+  }
+  .why-card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 16px; padding: 24px 20px;
+  }
+  .why-icon { font-size: 32px; margin-bottom: 12px; }
+  .why-title { font-size: 16px; font-weight: 800; margin-bottom: 8px; }
+  .why-desc { font-size: 14px; color: var(--muted); line-height: 1.5; }
 
-  /* Promise section */
-  .promise {
-    background: rgba(0,122,255,0.06);
-    border-top: 1px solid rgba(0,122,255,0.15);
-    border-bottom: 1px solid rgba(0,122,255,0.15);
+  /* ── Comparison ── */
+  .compare-table {
+    width: 100%; border-collapse: collapse;
+    background: var(--card); border-radius: 16px; overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .compare-table th {
+    padding: 14px 20px; text-align: left; font-size: 13px; font-weight: 800;
+    text-transform: uppercase; letter-spacing: 0.5px;
+    background: rgba(255,255,255,0.03); color: var(--muted);
+    border-bottom: 1px solid var(--border);
+  }
+  .compare-table th:not(:first-child) { text-align: center; }
+  .compare-table td {
+    padding: 14px 20px; font-size: 14px; color: var(--muted);
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+  }
+  .compare-table td:first-child { font-weight: 600; color: var(--text); }
+  .compare-table td:not(:first-child) { text-align: center; font-size: 18px; }
+  .compare-table tr:last-child td { border-bottom: none; }
+  .compare-table tr:hover td { background: rgba(255,255,255,0.02); }
+  .col-us { color: #007AFF !important; font-weight: 800; }
+  .compare-wrap { overflow-x: auto; border-radius: 16px; }
+
+  /* ── FAQ ── */
+  .faq-list { max-width: 680px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--border); padding: 20px 0;
+  }
+  .faq-q { font-size: 16px; font-weight: 700; margin-bottom: 8px; }
+  .faq-a { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+  /* ── Langs ── */
+  .lang-pills { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+  .lang-pill {
+    background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+    border-radius: 20px; padding: 8px 18px; font-size: 14px; font-weight: 600;
   }
 
-  .promise-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 32px; padding: 48px 24px;
-    max-width: 1100px; margin: 0 auto;
-  }
-
-  .promise-item { text-align: center; }
-  .promise-icon { font-size: 32px; margin-bottom: 12px; }
-  .promise-title { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
-  .promise-desc { font-size: 13px; color: var(--muted); line-height: 1.5; }
-
-  /* Footer */
+  /* ── Footer ── */
   footer {
-    text-align: center; padding: 40px 24px;
-    font-size: 13px; color: rgba(255,255,255,0.25);
+    text-align: center; padding: 48px 24px;
+    border-top: 1px solid var(--border); color: var(--muted2);
+    font-size: 13px; line-height: 2;
   }
-  footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
-  footer a:hover { color: rgba(255,255,255,0.7); }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--text); }
+
+  /* ── Divider ── */
+  .divider { border: none; border-top: 1px solid var(--border); margin: 0; }
 </style>
 </head>
 <body>
 
+<!-- ═══════════════════ HERO ═══════════════════ -->
 <div class="hero">
-  <div class="hero-badge">
-    <span>📱</span>
-    6 Premium iOS Apps
-  </div>
-  <h1>Tools That Work.<br><span>No Subscriptions.</span></h1>
-  <p>Premium iOS utilities built with one goal: do the job perfectly, then get out of your way. Pay once. Use forever.</p>
+  <div class="hero-badge">🍎 Coming to App Store · iOS 16+</div>
+  <h1>6 Premium Apps.<br><em>Pay Once. Forever.</em></h1>
+  <p class="hero-sub">No subscriptions. No ads. No tracking. Professional iOS utilities that respect your privacy and your wallet.</p>
   <div class="value-pills">
-    <div class="vpill"><span>✅</span>No subscription</div>
-    <div class="vpill"><span>🚫</span>No ads</div>
-    <div class="vpill"><span>🔒</span>Privacy-first</div>
-    <div class="vpill"><span>✈️</span>Works offline</div>
-    <div class="vpill"><span>💰</span>One-time purchase</div>
+    <div class="pill">✅ No Subscription</div>
+    <div class="pill">🚫 No Ads</div>
+    <div class="pill">✈️ Works Offline</div>
+    <div class="pill">🔒 Privacy First</div>
+    <div class="pill">🌍 9 Languages</div>
+  </div>
+  <div class="stat-row">
+    <div class="stat"><div class="stat-num">6</div><div class="stat-lbl">Premium Apps</div></div>
+    <div class="stat"><div class="stat-num">9</div><div class="stat-lbl">Languages</div></div>
+    <div class="stat"><div class="stat-num">0</div><div class="stat-lbl">Subscriptions</div></div>
+    <div class="stat"><div class="stat-num">∞</div><div class="stat-lbl">Updates Included</div></div>
   </div>
 </div>
 
+<hr class="divider">
+
+<!-- ═══════════════════ APPS ═══════════════════ -->
 <div class="section">
-  <div class="section-title">Our Apps</div>
+  <div class="section-title">The Collection</div>
+  <h2 class="section-h2">Everything you need,<br><em>nothing you don't.</em></h2>
   <div class="apps-grid">
 
-    <!-- QuickInvoice AI -->
-    <div class="app-card">
-      <div class="app-card-header">
-        <div class="app-icon" style="background:linear-gradient(135deg,#007AFF,#0051D4)">📄</div>
-        <div class="app-meta">
+    <div class="app-card" data-color="blue">
+      <div class="app-header">
+        <div class="app-icon" style="background:linear-gradient(135deg,#007AFF,#0051D4)">🧾</div>
+        <div>
           <div class="app-name">QuickInvoice AI</div>
-          <div class="app-tagline">Freelance Billing & Tracker</div>
+          <span class="app-price" style="background:rgba(0,122,255,0.15);color:#007AFF">$2.99</span>
         </div>
-        <div class="app-price" style="color:#007AFF">$2.99<span class="once">one-time</span></div>
       </div>
-      <div class="app-desc">Create professional invoices in seconds. Manage clients, track payments, export to PDF, and share via WhatsApp. No subscription, ever.</div>
+      <div class="app-desc">Create professional PDF invoices in seconds. Manage clients, track payments, and send via WhatsApp or email — all offline.</div>
       <div class="app-features">
-        <span class="feat-chip">📄 PDF Export</span>
-        <span class="feat-chip">💬 WhatsApp Share</span>
-        <span class="feat-chip">🔔 Due Date Alerts</span>
-        <span class="feat-chip">👥 Client Manager</span>
-        <span class="feat-chip">🔒 Offline</span>
+        <span class="feature-chip">PDF Generation</span>
+        <span class="feature-chip">Client Manager</span>
+        <span class="feature-chip">Payment Tracker</span>
+        <span class="feature-chip">Due Reminders</span>
+        <span class="feature-chip">WhatsApp Share</span>
       </div>
-      <a class="app-cta cta-coming" href="#">Coming Soon to App Store</a>
+      <a class="app-cta" href="#">🔔 Notify Me on Launch</a>
     </div>
 
-    <!-- Focus Timer Pro -->
-    <div class="app-card">
-      <div class="app-card-header">
-        <div class="app-icon" style="background:linear-gradient(135deg,#FF6B35,#FF3B00)">⏱️</div>
-        <div class="app-meta">
+    <div class="app-card" data-color="orange">
+      <div class="app-header">
+        <div class="app-icon" style="background:linear-gradient(135deg,#FF6B35,#FF3300)">⏱️</div>
+        <div>
           <div class="app-name">Focus Timer Pro</div>
-          <div class="app-tagline">Deep Work Sessions & Streaks</div>
+          <span class="app-price" style="background:rgba(255,107,53,0.15);color:#FF6B35">$1.99</span>
         </div>
-        <div class="app-price" style="color:#FF6B35">$1.99<span class="once">one-time</span></div>
       </div>
-      <div class="app-desc">Pomodoro timer that actually tracks your progress. Build focus streaks, visualize your productivity, and get detailed analytics.</div>
+      <div class="app-desc">Beat procrastination with the Pomodoro technique. Track sessions, maintain streaks, and watch your productivity soar.</div>
       <div class="app-features">
-        <span class="feat-chip">🍅 Pomodoro</span>
-        <span class="feat-chip">🔥 Streaks</span>
-        <span class="feat-chip">📊 Statistics</span>
-        <span class="feat-chip">🔕 No Ads</span>
-        <span class="feat-chip">📳 Haptics</span>
+        <span class="feature-chip">Pomodoro Timer</span>
+        <span class="feature-chip">Streak Tracking</span>
+        <span class="feature-chip">Session Stats</span>
+        <span class="feature-chip">Custom Durations</span>
+        <span class="feature-chip">No Ads</span>
       </div>
-      <a class="app-cta cta-coming" href="#">Coming Soon to App Store</a>
+      <a class="app-cta" href="#">🔔 Notify Me on Launch</a>
     </div>
 
-    <!-- Tip & Bill Split -->
-    <div class="app-card">
-      <div class="app-card-header">
-        <div class="app-icon" style="background:linear-gradient(135deg,#34C759,#20A041)">🍽️</div>
-        <div class="app-meta">
-          <div class="app-name">Tip &amp; Bill Split</div>
-          <div class="app-tagline">Restaurant Check &amp; Split</div>
+    <div class="app-card" data-color="green">
+      <div class="app-header">
+        <div class="app-icon" style="background:linear-gradient(135deg,#34C759,#20A041)">💸</div>
+        <div>
+          <div class="app-name">Tip & Bill Split</div>
+          <span class="app-price" style="background:rgba(52,199,89,0.15);color:#34C759">$0.99</span>
         </div>
-        <div class="app-price" style="color:#34C759">$0.99<span class="once">one-time</span></div>
       </div>
-      <div class="app-desc">Split the bill instantly, no arguments. Calculate tips and divide among any group size. Supports 6 currencies. No ads at the table.</div>
+      <div class="app-desc">Split restaurant bills in seconds. Choose tip percentage, number of people, and instantly see everyone's share.</div>
       <div class="app-features">
-        <span class="feat-chip">🌍 6 Currencies</span>
-        <span class="feat-chip">👥 Any Group Size</span>
-        <span class="feat-chip">📋 Bill History</span>
-        <span class="feat-chip">📤 CSV Export</span>
-        <span class="feat-chip">⚡ Instant</span>
+        <span class="feature-chip">Tip Calculator</span>
+        <span class="feature-chip">Bill Splitting</span>
+        <span class="feature-chip">Round Up/Down</span>
+        <span class="feature-chip">History</span>
+        <span class="feature-chip">No Ads</span>
       </div>
-      <a class="app-cta cta-coming" href="#">Coming Soon to App Store</a>
+      <a class="app-cta" href="#">🔔 Notify Me on Launch</a>
     </div>
 
-    <!-- Habit Tracker Pro -->
-    <div class="app-card">
-      <div class="app-card-header">
+    <div class="app-card" data-color="purple">
+      <div class="app-header">
         <div class="app-icon" style="background:linear-gradient(135deg,#AF52DE,#8B2FC9)">✅</div>
-        <div class="app-meta">
+        <div>
           <div class="app-name">Habit Tracker Pro</div>
-          <div class="app-tagline">Daily Routine &amp; Calendar View</div>
+          <span class="app-price" style="background:rgba(175,82,222,0.15);color:#AF52DE">$1.99</span>
         </div>
-        <div class="app-price" style="color:#AF52DE">$1.99<span class="once">one-time</span></div>
       </div>
-      <div class="app-desc">Track your habits, build streaks, and see your whole year at a glance. Calendar heatmap, daily reminders, and completion analytics.</div>
+      <div class="app-desc">Build lasting habits with daily check-ins, streak tracking, calendar heatmaps, and personalized reminders.</div>
       <div class="app-features">
-        <span class="feat-chip">🔥 Streaks</span>
-        <span class="feat-chip">📅 Heatmap Calendar</span>
-        <span class="feat-chip">🔔 Reminders</span>
-        <span class="feat-chip">📊 Analytics</span>
-        <span class="feat-chip">🎉 Celebrations</span>
+        <span class="feature-chip">Daily Check-in</span>
+        <span class="feature-chip">Streak Counter</span>
+        <span class="feature-chip">Year Heatmap</span>
+        <span class="feature-chip">Reminders</span>
+        <span class="feature-chip">No Subscription</span>
       </div>
-      <a class="app-cta cta-coming" href="#">Coming Soon to App Store</a>
+      <a class="app-cta" href="#">🔔 Notify Me on Launch</a>
     </div>
 
-    <!-- Unit Converter Pro -->
-    <div class="app-card">
-      <div class="app-card-header">
-        <div class="app-icon" style="background:linear-gradient(135deg,#0A84FF,#005FCC)">📏</div>
-        <div class="app-meta">
+    <div class="app-card" data-color="teal">
+      <div class="app-header">
+        <div class="app-icon" style="background:linear-gradient(135deg,#0A84FF,#0055D4)">📐</div>
+        <div>
           <div class="app-name">Unit Converter Pro</div>
-          <div class="app-tagline">Metric, Imperial &amp; 60+ Units</div>
+          <span class="app-price" style="background:rgba(10,132,255,0.15);color:#0A84FF">$1.49</span>
         </div>
-        <div class="app-price" style="color:#0A84FF">$1.49<span class="once">one-time</span></div>
       </div>
-      <div class="app-desc">Convert anything in real-time. 8 categories: Length, Weight, Temperature, Volume, Area, Speed, Data Storage, and Time. Fully offline.</div>
+      <div class="app-desc">Convert 60+ units across 8 categories instantly. See all conversions simultaneously — no "to" unit needed.</div>
       <div class="app-features">
-        <span class="feat-chip">⚡ Real-time</span>
-        <span class="feat-chip">📦 8 Categories</span>
-        <span class="feat-chip">💾 Data Storage</span>
-        <span class="feat-chip">✈️ 100% Offline</span>
-        <span class="feat-chip">📤 Share Results</span>
+        <span class="feature-chip">60+ Units</span>
+        <span class="feature-chip">8 Categories</span>
+        <span class="feature-chip">Pin Favorites</span>
+        <span class="feature-chip">Formula View</span>
+        <span class="feature-chip">Offline</span>
       </div>
-      <a class="app-cta cta-coming" href="#">Coming Soon to App Store</a>
+      <a class="app-cta" href="#">🔔 Notify Me on Launch</a>
     </div>
 
-    <!-- Password Generator Pro -->
-    <div class="app-card">
-      <div class="app-card-header">
-        <div class="app-icon" style="background:linear-gradient(135deg,#32ADE6,#0084D0)">🔐</div>
-        <div class="app-meta">
+    <div class="app-card" data-color="mint">
+      <div class="app-header">
+        <div class="app-icon" style="background:linear-gradient(135deg,#30D158,#20A141)">🔐</div>
+        <div>
           <div class="app-name">Password Generator Pro</div>
-          <div class="app-tagline">Strong &amp; Secure Password Maker</div>
+          <span class="app-price" style="background:rgba(48,209,88,0.15);color:#30D158">$1.99</span>
         </div>
-        <div class="app-price" style="color:#32ADE6">$1.99<span class="once">one-time</span></div>
       </div>
-      <div class="app-desc">Generate uncrackable passwords instantly. Strength checker, batch generation, and secure history. 100% offline — no cloud, no account.</div>
+      <div class="app-desc">Generate unbreakable passwords and analyze existing ones. Check entropy, estimated crack time, and security gaps.</div>
       <div class="app-features">
-        <span class="feat-chip">🛡️ Strength Checker</span>
-        <span class="feat-chip">📦 Batch Generate</span>
-        <span class="feat-chip">🕒 History</span>
-        <span class="feat-chip">🔒 100% Offline</span>
-        <span class="feat-chip">🚫 No Account</span>
+        <span class="feature-chip">64-char Passwords</span>
+        <span class="feature-chip">Strength Meter</span>
+        <span class="feature-chip">Batch Generate</span>
+        <span class="feature-chip">Entropy Score</span>
+        <span class="feature-chip">100% Offline</span>
       </div>
-      <a class="app-cta cta-coming" href="#">Coming Soon to App Store</a>
+      <a class="app-cta" href="#">🔔 Notify Me on Launch</a>
     </div>
 
   </div>
 </div>
 
-<div class="promise">
-  <div class="promise-grid">
-    <div class="promise-item">
-      <div class="promise-icon">💰</div>
-      <div class="promise-title">No Subscriptions</div>
-      <div class="promise-desc">Every app is a one-time purchase. No recurring fees, ever.</div>
+<hr class="divider">
+
+<!-- ═══════════════════ WHY ═══════════════════ -->
+<div class="section">
+  <div class="section-title">Our Philosophy</div>
+  <h2 class="section-h2">Apps that work <em>for you,</em><br>not against you.</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon">💰</div>
+      <div class="why-title">Pay Once, Own Forever</div>
+      <div class="why-desc">No monthly fees. No annual renewals. One fair price gets you the app and all future updates — forever.</div>
     </div>
-    <div class="promise-item">
-      <div class="promise-icon">🚫</div>
-      <div class="promise-title">Zero Ads</div>
-      <div class="promise-desc">No ads interrupting your work. Clean, focused experience.</div>
+    <div class="why-card">
+      <div class="why-icon">🚫</div>
+      <div class="why-title">Zero Ads</div>
+      <div class="why-desc">We make money when you buy, not from selling your attention. Clean, distraction-free interfaces throughout.</div>
     </div>
-    <div class="promise-item">
-      <div class="promise-icon">🔒</div>
-      <div class="promise-title">Privacy First</div>
-      <div class="promise-desc">No accounts required. No data collection. Everything stays on your device.</div>
+    <div class="why-card">
+      <div class="why-icon">✈️</div>
+      <div class="why-title">Fully Offline</div>
+      <div class="why-desc">All 6 apps work 100% without internet. No accounts, no cloud sync required, no server to go down.</div>
     </div>
-    <div class="promise-item">
-      <div class="promise-icon">✈️</div>
-      <div class="promise-title">Works Offline</div>
-      <div class="promise-desc">All 6 apps work without internet. Reliable in any situation.</div>
+    <div class="why-card">
+      <div class="why-icon">🔒</div>
+      <div class="why-title">Your Data Stays Yours</div>
+      <div class="why-desc">All data stored locally on your device. We don't collect, sell, or even have access to your information.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">🌍</div>
+      <div class="why-title">9 Languages</div>
+      <div class="why-desc">English, 中文, 日本語, 한국어, Deutsch, Français, Português, Español, Русский — all localized natively.</div>
+    </div>
+    <div class="why-card">
+      <div class="why-icon">⚡</div>
+      <div class="why-title">Instant &amp; Lightweight</div>
+      <div class="why-desc">No heavy frameworks, no bloat. Apps launch instantly and run smoothly on any supported iPhone.</div>
     </div>
   </div>
 </div>
 
+<hr class="divider">
+
+<!-- ═══════════════════ COMPARISON ═══════════════════ -->
+<div class="section">
+  <div class="section-title">How We Compare</div>
+  <h2 class="section-h2">The <em>obvious choice</em><br>for conscious users.</h2>
+  <div class="compare-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th class="col-us">Simple Apps</th>
+          <th>Typical App</th>
+          <th>Subscription App</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>One-time price</td><td class="col-us">✅</td><td>Sometimes</td><td>❌</td></tr>
+        <tr><td>No subscription</td><td class="col-us">✅</td><td>⚠️ Often freemium</td><td>❌</td></tr>
+        <tr><td>No ads</td><td class="col-us">✅</td><td>❌ Usually has ads</td><td>✅</td></tr>
+        <tr><td>Works offline</td><td class="col-us">✅</td><td>⚠️ Limited</td><td>⚠️ Limited</td></tr>
+        <tr><td>No account needed</td><td class="col-us">✅</td><td>⚠️ Often required</td><td>❌ Required</td></tr>
+        <tr><td>No data collection</td><td class="col-us">✅</td><td>❌ Analytics tracking</td><td>❌ Account data</td></tr>
+        <tr><td>Price over 2 years</td><td class="col-us" style="color:#34C759">$0.99–$2.99</td><td>$5–$15</td><td>$20–$100</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════ LANGUAGES ═══════════════════ -->
+<div class="section" style="text-align:center;padding-bottom:56px">
+  <div class="section-title">Localized</div>
+  <h2 class="section-h2" style="margin-bottom:32px">Available in <em>9 languages</em></h2>
+  <div class="lang-pills">
+    <div class="lang-pill">🇺🇸 English</div>
+    <div class="lang-pill">🇨🇳 简体中文</div>
+    <div class="lang-pill">🇯🇵 日本語</div>
+    <div class="lang-pill">🇰🇷 한국어</div>
+    <div class="lang-pill">🇩🇪 Deutsch</div>
+    <div class="lang-pill">🇫🇷 Français</div>
+    <div class="lang-pill">🇧🇷 Português</div>
+    <div class="lang-pill">🇲🇽 Español</div>
+    <div class="lang-pill">🇷🇺 Русский</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════ FAQ ═══════════════════ -->
+<div class="section">
+  <div class="section-title">FAQ</div>
+  <h2 class="section-h2">Common <em>questions</em></h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <div class="faq-q">Do I need to create an account?</div>
+      <div class="faq-a">No. None of our apps require an account, email address, or sign-up of any kind. Download and use immediately.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Is there a free trial?</div>
+      <div class="faq-a">All apps are paid upfront with Apple's standard 14-day refund policy. There is no subscription or free tier — it's a fair one-time price.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Do the apps collect my data?</div>
+      <div class="faq-a">No. All data is stored locally on your iPhone. We have no servers, no analytics, and no access to your information whatsoever.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">Will the apps work without internet?</div>
+      <div class="faq-a">Yes — all 6 apps work 100% offline. They don't need internet to function, even in airplane mode.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">What iOS version is required?</div>
+      <div class="faq-a">iOS 16 or later. All apps are optimized for iOS 17 and 18, including Dynamic Island support.</div>
+    </div>
+    <div class="faq-item">
+      <div class="faq-q">When will the apps be available?</div>
+      <div class="faq-a">We're currently in the App Store review process. Apps will be available shortly. All 9 language localizations will be available from day one.</div>
+    </div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ═══════════════════ FOOTER ═══════════════════ -->
 <footer>
-  <p style="margin-bottom:12px">
-    <a href="/apple-privacy/">Privacy Policy</a> &nbsp;·&nbsp;
-    <a href="mailto:cs.business.tutor@gmail.com">Contact</a>
-  </p>
-  <p>© 2025 Simple App Studio &nbsp;·&nbsp; Made with ❤️ for productivity</p>
+  <div style="font-size:24px;margin-bottom:12px">🍎</div>
+  <div style="font-weight:700;font-size:16px;color:rgba(255,255,255,0.7);margin-bottom:8px">Simple Apps</div>
+  <div>Premium iOS utilities · Pay once, use forever</div>
+  <div style="margin-top:16px">
+    <a href="./index.html">Privacy Policy</a> &nbsp;·&nbsp;
+    <a href="mailto:cs.business.tutor@gmail.com">Support</a> &nbsp;·&nbsp;
+    <a href="./apps.html">All Apps</a>
+  </div>
+  <div style="margin-top:12px;font-size:12px">© 2026 Simple Apps. All rights reserved.</div>
 </footer>
 
 </body>
