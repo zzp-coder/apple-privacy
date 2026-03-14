@@ -211,6 +211,19 @@
     border-radius: 20px; padding: 8px 18px; font-size: 14px; font-weight: 600;
   }
 
+  /* ── Top Bar ── */
+  .top-bar {
+    background: linear-gradient(90deg, rgba(0,122,255,0.15), rgba(0,122,255,0.08));
+    border-bottom: 1px solid rgba(0,122,255,0.2);
+    text-align: center; padding: 10px 24px;
+    font-size: 13px; font-weight: 600;
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+  }
+  .top-bar a {
+    color: #64ABFF; text-decoration: none; border-bottom: 1px solid rgba(100,171,255,0.4);
+  }
+  .top-bar a:hover { color: #007AFF; }
+
   /* ── Footer ── */
   footer {
     text-align: center; padding: 48px 24px;
@@ -225,6 +238,11 @@
 </style>
 </head>
 <body>
+
+<!-- ═══════════════════ TOP BAR ═══════════════════ -->
+<div class="top-bar">
+  🚀 Launching soon on the App Store &nbsp;·&nbsp; <a href="mailto:cs.business.tutor@gmail.com?subject=Notify%20me%20when%20Simple%20Apps%20launches&body=Please%20add%20me%20to%20the%20launch%20notification%20list%20for%20all%20Simple%20Apps.">Get notified at launch →</a>
+</div>
 
 <!-- ═══════════════════ HERO ═══════════════════ -->
 <div class="hero">
@@ -302,11 +320,11 @@
           <span class="app-price" style="background:rgba(52,199,89,0.15);color:#34C759">$0.99</span>
         </div>
       </div>
-      <div class="app-desc">Split restaurant bills in seconds. Choose tip percentage, number of people, and instantly see everyone's share.</div>
+      <div class="app-desc">Split restaurant bills in seconds. Choose tip %, number of people, and share everyone's exact amount instantly.</div>
       <div class="app-features">
         <span class="feature-chip">Tip Calculator</span>
         <span class="feature-chip">Bill Splitting</span>
-        <span class="feature-chip">Round Up/Down</span>
+        <span class="feature-chip">Share Results</span>
         <span class="feature-chip">History</span>
         <span class="feature-chip">No Ads</span>
       </div>
@@ -322,11 +340,11 @@
           <span class="app-price" style="background:rgba(175,82,222,0.15);color:#AF52DE">$1.99</span>
         </div>
       </div>
-      <div class="app-desc">Build lasting habits with daily check-ins, streak tracking, calendar heatmaps, and personalized reminders.</div>
+      <div class="app-desc">Build lasting habits with daily check-ins, streak tracking, progress heatmaps, and personalized reminders.</div>
       <div class="app-features">
         <span class="feature-chip">Daily Check-in</span>
         <span class="feature-chip">Streak Counter</span>
-        <span class="feature-chip">Year Heatmap</span>
+        <span class="feature-chip">Progress Heatmap</span>
         <span class="feature-chip">Reminders</span>
         <span class="feature-chip">No Subscription</span>
       </div>
@@ -342,12 +360,12 @@
           <span class="app-price" style="background:rgba(10,132,255,0.15);color:#0A84FF">$1.49</span>
         </div>
       </div>
-      <div class="app-desc">Convert 60+ units across 8 categories instantly. See all conversions simultaneously — no "to" unit needed.</div>
+      <div class="app-desc">Convert 60+ units across 8 categories instantly. See all conversions at once — tap any result to set as target.</div>
       <div class="app-features">
         <span class="feature-chip">60+ Units</span>
         <span class="feature-chip">8 Categories</span>
-        <span class="feature-chip">Pin Favorites</span>
-        <span class="feature-chip">Formula View</span>
+        <span class="feature-chip">All Conversions View</span>
+        <span class="feature-chip">Share Results</span>
         <span class="feature-chip">Offline</span>
       </div>
       <a class="app-cta" href="mailto:cs.business.tutor@gmail.com?subject=Notify%20me%20when%20Unit%20Converter%20Pro%20launches&body=Please%20add%20me%20to%20the%20launch%20notification%20list%20for%20Unit%20Converter%20Pro.">🔔 Notify Me on Launch</a>
@@ -407,7 +425,7 @@
     <div class="why-card">
       <div class="why-icon">🌍</div>
       <div class="why-title">10 Languages</div>
-      <div class="why-desc">English, 中文, 日本語, 한국어, Deutsch, Français, Português, Español, Русский — all localized natively.</div>
+      <div class="why-desc">English, 中文, 日本語, 한국어, Deutsch, Français, Português, Español, Русский, Italiano — all localized natively.</div>
     </div>
     <div class="why-card">
       <div class="why-icon">⚡</div>
@@ -479,7 +497,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">Is there a free trial?</div>
-      <div class="faq-a">All apps are paid upfront with Apple's standard 14-day refund policy. There is no subscription or free tier — it's a fair one-time price.</div>
+      <div class="faq-a">There's no free trial, but prices start at just $0.99 — less than a coffee. Apple also handles refund requests through their standard process. No subscription, no hidden tiers.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">Do the apps collect my data?</div>
@@ -490,12 +508,16 @@
       <div class="faq-a">Yes — all 6 apps work 100% offline. They don't need internet to function, even in airplane mode.</div>
     </div>
     <div class="faq-item">
+      <div class="faq-q">Why pay when there are free alternatives?</div>
+      <div class="faq-a">Free apps make money through ads (distracting you) or subscriptions (charging you monthly). Our one-time price means no ads interrupting your workflow, no data sold, and no recurring costs. A $0.99 coffee costs more than Tip Split, and you only pay once.</div>
+    </div>
+    <div class="faq-item">
       <div class="faq-q">What iOS version is required?</div>
       <div class="faq-a">iOS 16 or later. All apps are optimized for iOS 17 and 18, including Dynamic Island support.</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">When will the apps be available?</div>
-      <div class="faq-a">We're currently in the App Store review process. Apps will be available shortly. All 10 language localizations will be available from day one.</div>
+      <div class="faq-a">We're in the final stages of preparing our App Store submission. The apps will launch soon. All 10 language localizations will be available from day one.</div>
     </div>
   </div>
 </div>
